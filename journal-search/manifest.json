@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Fallen London Journal Search",
+  "version": "1.0",
+
+  "description": "Search a profile's journal on Fallen London.",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.fallenlondon.com/profile/*"],
+      "js": [
+        "mark.min.js", 
+        "createElements.js", 
+        "search.js"
+      ]
+    }
+  ],
+  "host_permissions": [
+    "*://api.fallenlondon.com/*"
+  ]
+}
